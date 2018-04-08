@@ -1,14 +1,12 @@
 import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 
-import { AuthGuard } from '../core';
 import { SessionsListComponent } from './sessions-list';
 import { SessionDetailsComponent, SessionDetailsResolver } from './session-details';
 
 const routes: Routes = [
     {
         path: 'sessions',
-        canActivate: [AuthGuard],
         runGuardsAndResolvers: 'always',
         children: [
             {

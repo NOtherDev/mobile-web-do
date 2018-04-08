@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { UnauthorizedComponent, PageNotFoundComponent, LoggedComponent } from './core';
+import { UnauthorizedComponent, PageNotFoundComponent } from './core';
 
 const routes: Routes = [
     {
@@ -8,9 +8,9 @@ const routes: Routes = [
         pathMatch: 'full',
         redirectTo: 'sessions'
     },
-    {
-        path: 'logged', component: LoggedComponent
-    },
+    // {
+    //     path: 'logged', component: LoggedComponent
+    // },
     {
         path: '401', component: UnauthorizedComponent
     },
